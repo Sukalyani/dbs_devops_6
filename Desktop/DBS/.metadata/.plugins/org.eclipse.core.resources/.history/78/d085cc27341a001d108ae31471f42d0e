@@ -1,0 +1,51 @@
+package com.dbs.jpa.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.dbs.jpa.entity.Sender;
+import com.dbs.jpa.repo.SenderRepo;
+
+import java.math.BigInteger;
+import java.util.List;
+
+@Service
+	public class SenderService {
+	    
+	    @Autowired
+	    SenderRepo senderRepo;
+	    
+	    public String addNewStudent(List<Sender> stu) {
+	        
+	        try{
+	            senderRepo.saveAll(stu);
+	        }catch(Exception e) {
+	            return "Problem Occured while inserting New Student Rec!!!!!!!!";
+	        }
+	        return " Student Added Successfully!!!!!!!!!";
+	    }
+	    public String updateStudent(List<Sender> emp) {
+	        try{
+	            
+	            //Student exitingStudent = studentRepo.findById(emp.getId()).get();
+	            
+	            senderRepo.saveAll(emp);
+	        }catch(Exception e) {
+	            return "No Student Found!!!!!!!";
+	        }
+	        return " Student Updated Successfully!!!!!!!!!";
+	    }
+	    public String deleteStudent(BigInteger customerId) {
+	        try{
+	            senderRepo.deleteById(customerId);
+	        }catch(Exception e) {
+	            return "Problem Occured while deleting New Student Rec!!!!!!!!";
+	        }
+	        return " Student Deleted Successfully!!!!!!!!!";
+	    }
+		public List<Sender> getAllSender() {
+			// TODO Auto-generated method stub
+			return senderRepo.findAll();
+		}
+		
+	}

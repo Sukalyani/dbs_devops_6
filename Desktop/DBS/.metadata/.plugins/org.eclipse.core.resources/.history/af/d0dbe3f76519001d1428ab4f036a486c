@@ -1,0 +1,49 @@
+package com.dbs.jpa.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.dbs.jpa.entity.Sender;
+import com.dbs.jpa.repo.StudentRepo;
+
+import java.util.List;
+
+@Service
+	public class StudentService {
+	    
+	    @Autowired
+	    StudentRepo studentRepo;
+	    public List<Sender> getAllStudents() {
+	        
+	        return studentRepo.findAll();
+	        
+	    }
+	    public String addNewStudent(List<Sender> stu) {
+	        
+	        try{
+	            studentRepo.saveAll(stu);
+	        }catch(Exception e) {
+	            return "Problem Occured while inserting New Student Rec!!!!!!!!";
+	        }
+	        return " Student Added Successfully!!!!!!!!!";
+	    }
+	    public String updateStudent(List<Sender> emp) {
+	        try{
+	            
+	            //Student exitingStudent = studentRepo.findById(emp.getId()).get();
+	            
+	            studentRepo.saveAll(emp);
+	        }catch(Exception e) {
+	            return "No Student Found!!!!!!!";
+	        }
+	        return " Student Updated Successfully!!!!!!!!!";
+	    }
+	    public String deleteStudent(int studentId) {
+	        try{
+	            studentRepo.deleteById(studentId);
+	        }catch(Exception e) {
+	            return "Problem Occured while deleting New Student Rec!!!!!!!!";
+	        }
+	        return " Student Deleted Successfully!!!!!!!!!";
+	    }
+	}

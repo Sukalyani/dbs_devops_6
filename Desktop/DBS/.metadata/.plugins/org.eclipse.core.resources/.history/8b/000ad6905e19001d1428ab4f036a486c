@@ -1,0 +1,48 @@
+package com.example.demo.service;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import com.example.demo.senderModel.sender;
+import com.example.demo.receiverModel.receiver;
+import com.example.demo.repo.proRepo;
+
+import java.util.List;
+@Service
+	public class proService {
+	    
+	    @Autowired
+	    proRepo prorepo;
+	    public List<sender> getAllStudents() {
+	        
+	        return ( prorepo).findAll();
+	        
+	    }
+	    public String addNewStudent(List<sender> stu) {
+	        
+	        try{
+	            prorepo.saveAll(stu);
+	        }catch(Exception e) {
+	            return "Problem Occured while inserting New Student Rec!!!!!!!!";
+	        }
+	        return " Student Added Successfully!!!!!!!!!";
+	    }
+	    public String updateStudent(List<sender> emp) {
+	        try{
+	            
+	            //Student exitingStudent = studentRepo.findById(emp.getId()).get();
+	            
+	            prorepo.saveAll(emp);
+	        }catch(Exception e) {
+	            return "No Student Found!!!!!!!";
+	        }
+	        return " Student Updated Successfully!!!!!!!!!";
+	    }
+	    public String deleteStudent(int studentId) {
+	        try{
+	            prorepo.deleteById(studentId);
+	        }catch(Exception e) {
+	            return "Problem Occured while deleting New Student Rec!!!!!!!!";
+	        }
+	        return " Student Deleted Successfully!!!!!!!!!";
+	    }
+	}
+

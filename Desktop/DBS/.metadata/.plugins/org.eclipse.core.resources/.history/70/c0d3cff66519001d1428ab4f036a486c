@@ -1,0 +1,5 @@
+package com.dbs.jpa.repo;
+
+public class RecieverRepo {
+
+}

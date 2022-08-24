@@ -1,0 +1,21 @@
+package com.dbs.jpa.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.dbs.jpa.entity.Reciever;
+import com.dbs.jpa.entity.Sender;
+import com.dbs.jpa.repo.RecieverRepo;
+
+@Service
+public class RecieverService {
+	
+	@Autowired
+	RecieverRepo receiverRepo;
+	public List<Reciever> getAllReciever() {
+		// TODO Auto-generated method stub
+		return receiverRepo.findAll();
+	}
+}

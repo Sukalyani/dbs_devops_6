@@ -1,0 +1,60 @@
+package com.dbs.jpa.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class Student {
+
+	@Id
+	int customerId;
+	String accountHolderName;
+	int clearBalance;
+	String transferType;
+	String overDraft;
+
+	public Student(int customerId, String accountHolderName, int clearBalance, String transferType, String overDraft) {
+		super();
+		this.customerId = customerId;
+		this.accountHolderName = accountHolderName;
+		this.clearBalance = clearBalance;
+		this.transferType = transferType;
+		this.overDraft = overDraft;
+	}
+	public Student() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public int getCustomerId() {
+		return customerId;
+	}
+	public void setCustomerId(int customerId) {
+		this.customerId = customerId;
+	}
+	public String getAccountHolderName() {
+		return accountHolderName;
+	}
+	public void setAccountHolderName(String accountHolderName) {
+		this.accountHolderName = accountHolderName;
+	}
+	public int getClearBalance() {
+		return clearBalance;
+	}
+	public void setClearBalance(int clearBalance) {
+		this.clearBalance = clearBalance;
+	}
+	public String getTransferType() {
+		return transferType;
+	}
+	public void setTransferType(String transferType) {
+		this.transferType = transferType;
+	}
+	public String getOverDraft() {
+		return overDraft;
+	}
+	public void setOverDraft(String overDraft) {
+		this.overDraft = overDraft;
+	}   
+    
+}
+

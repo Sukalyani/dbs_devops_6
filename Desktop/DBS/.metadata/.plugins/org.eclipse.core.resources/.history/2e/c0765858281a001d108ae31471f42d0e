@@ -1,0 +1,5 @@
+package com.dbs.jpa.repo;
+import org.springframework.data.jpa.repository.JpaRepository;
+import com.dbs.jpa.entity.Sender;
+public interface StudentRepo extends JpaRepository<Sender, Integer> {
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Backend-Spring"/>
+			<item value="C:\Users\Administrator\Downloads\Bank-Application-Backend-Spring-main\Bank-Application-Backend-Spring-main\user\src\main\java\com\user\validate\user\UserApplication.java"/>
+			<item value="C:\Users\Administrator\Downloads\Bank-Application-Backend-Spring-main"/>
+			<item value="C:\Users\Administrator\Downloads\probackend"/>
+			<item value="C:\Users\Administrator\Downloads\projectBackEnd-main"/>
+			<item value="C:\Users\Administrator\Downloads\pbe"/>
+			<item value="C:\Users\Administrator\Downloads\pbe\projectBackEnd-main"/>
+			<item value="C:\Users\Administrator\Documents\workspace-spring-tool-suite-4-4.11.0.RELEASE\Project1"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+</section>
